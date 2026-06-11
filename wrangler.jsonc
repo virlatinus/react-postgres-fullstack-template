@@ -6,7 +6,9 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "react-postgres-fullstack-template",
 	"main": "api/index.js",
-	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_flags": [
+		"nodejs_compat"
+	],
 	"compatibility_date": "2025-10-08",
 	"observability": {
 		"enabled": true
@@ -15,17 +17,14 @@
 		"binding": "ASSETS",
 		"not_found_handling": "single-page-application"
 	},
-	// Hyperdrive binding is optional - if not provided, app will use mock data
-	// To enable Hyperdrive, uncomment and configure properly:
-	/*
-    "hyperdrive": [
-      {
-        "binding": "HYPERDRIVE",
-        "id": "YOUR_HYPERDRIVE_ID",
-        "localConnectionString": "postgresql://myuser:mypassword@localhost:5432/mydatabase"
-      }
-    ],
-    */
+	"hyperdrive": [
+		{
+			"binding": "HYPERDRIVE",
+			"id": "e6b209a7ad3645f7b350b8ad49fde8df",
+			// Optional. Can be used to connect to a local database for local development with `wrangler dev`
+			"localConnectionString": "<LOCAL_CONNECTION_STRING_FOR_LOCAL_DEVELOPMENT_HERE>"
+		}
+	],
 	"placement": {
 		"mode": "smart"
 	},
